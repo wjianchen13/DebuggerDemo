@@ -18,11 +18,15 @@ Attach Debugger to Android Process可以在app已经运行的时候，将调试�
 早已经执行完成了。
 
 ## 使用android.os.Debug
-这个时候可以使用android系统提供的调试API方法：
+这个时候可以使用android系统提供的调试API方法：<br/>
+
+```Java
 Debug.waitForDebugger();
+```
+
 它的作用是等待调试器连接，当调试器连接上之后才会执行以后的代码。这个时候点击android studio的
 Attach Debugger to Android Process按钮，当连接上调试器的时候，程序会继续执行waitForDebugger()之后的代码，
-这样就可以调试一些启动靠前的代码，效率也节省很多。
+这样就可以调试一些启动靠前的代码，效率也节省很多。<br/>
 可以添加标志判断是调试模式才调用这句代码，这样就不用每次发release包都修改，保证release不调用就ok了。
 
 ## license
